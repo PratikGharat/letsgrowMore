@@ -1,0 +1,148 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: black;
+  }
+  h3 {
+	color: black;
+	animation-name: colorchng;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+  }
+  @keyframes colorchng {
+	0% {
+	  color: black;
+	}
+	20% {
+	  color: yellow;
+	}
+	40% {
+	  color: skyblue;
+	}
+	60% {
+	  color: pink;
+	}
+	80% {
+	  color: paleturquoise;
+	}
+	100% {
+	  color: white;
+	}
+  }
+  .container {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+  }
+  #calculator {
+	width: 320px;
+	max-height: 520px;
+	background-color: white;
+	margin: 0 auto;
+	top: 50px;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 5px 5px 0 white;
+  }
+  #result {
+	height: 120px;
+  }
+  #history {
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 20px;
+	color: black;
+  }
+  #output {
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+  }
+  #keyboard {
+	height: 600px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto;
+	align-content: center;
+	margin-top: -100px;
+	background-color: white;
+  }
+  .operator,
+  .number {
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+  }
+  .number {
+	background-color: lightslategrey;
+  }
+  .number,
+  .operator {
+	cursor: pointer;
+  }
+  .operator:active,
+  .number:active {
+	font-size: 13px;
+  }
+  .operator:focus,
+  .number:focus,
+  .empty:focus {
+	outline: 0;
+  }
+  button:nth-child(3) {
+	font-size: 20px;
+	background-color: lightcoral;
+  }
+  button:nth-child(4) {
+	font-size: 20px;
+	background-color: paleturquoise;
+  }
+  button:nth-child(8) {
+	font-size: 20px;
+	background-color: yellowgreen;
+  }
+  button:nth-child(12) {
+	font-size: 20px;
+	background-color: #f08080;
+  }
+  button:nth-child(16) {
+	font-size: 20px;
+	background-color: darkgreen;
+  }
+  button:nth-child(19) {
+	font-size: 20px;
+	background-color: palegoldenrod;
+  }
+  button:nth-child(20) {
+	font-size: 20px;
+	background-color: #9477af;
+  }
+  
+  @media only screen and (max-width: 450px) {
+	#calculator {
+	  width: 80%;
+	  height: 80%;
+	}
+	.operator,
+	.number {
+	  margin: 8px;
+	}
+  }
+  
+  @media only screen and (max-width: 333px) {
+	#calculator {
+	  width: 100%;
+	  max-height: 100%;
+	}
+	.operator,
+	.number {
+	  margin: 8px;
+	}
+  }
